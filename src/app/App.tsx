@@ -1,10 +1,10 @@
 import {ReactElement, Suspense} from 'react';
 import './styles/index.scss';
 import {Link, Route, Routes} from "react-router-dom";
-import {MainPageAsync} from "./pages/main-page/MainPage.async";
-import {AboutPageAsync} from "./pages/about-page/AboutPage.async";
-import {useTheme} from "./theme/useTheme";
-import {classnames} from "./helpers/classnames/classnames";
+import {MainPage} from "pages/main-page/";
+import {AboutPage} from "pages/about-page/";
+import {useTheme} from "app/providers/theme-provider";
+import {classnames} from "shared/lib/classnames/classnames";
 
 
  const App = (): ReactElement => {
@@ -19,8 +19,8 @@ import {classnames} from "./helpers/classnames/classnames";
             <button onClick={toggleTheme}>Change Theme</button>
             <Suspense fallback={<div>Loading...</div>} >
                 <Routes>
-                    <Route path='/' element={<MainPageAsync />} />
-                    <Route path='/about' element={<AboutPageAsync />} />
+                    <Route path='/' element={<MainPage />} />
+                    <Route path='/about' element={<AboutPage  />} />
                 </Routes>
             </Suspense>
         </div>
