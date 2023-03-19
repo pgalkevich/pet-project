@@ -6,7 +6,7 @@ export function buildLoaders({isDev}: IBuildOptions): RuleSetRule[] {
     const cssloader = {
         test: /\.s[ac]ss$/i,
         use: [
-            // Creates `style` nodes from JS strings
+            // MiniCssExtractPlugin компилирует стили в отдельный файл
             isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
             // Translates CSS into CommonJS
             {
