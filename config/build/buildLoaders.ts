@@ -13,7 +13,9 @@ export function buildLoaders({isDev}: IBuildOptions): RuleSetRule[] {
                 loader: "css-loader",
                 options: {
                     modules: {
+                        // включает css модули только для файлов в именах которых присутствует '.module.' (напр. Component.module.scss)
                         auto: (resPath: string) => Boolean(resPath.includes('.module.')),
+                        // нужно для того чтобы в дев режиме сохранялась читабельная часть имени селектора и пусть к файлу стилей
                         localIdentName: isDev
                             ? '[path][name]__[local]--[hash:base64:5]'
                             : '[hash:base64:8]'
@@ -26,8 +28,7 @@ export function buildLoaders({isDev}: IBuildOptions): RuleSetRule[] {
     }
 
         // Если НЕ используется TS, то нужно подключать babel-loader
-        const
-    typescriptLoader = {
+        const typescriptLoader = {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/,

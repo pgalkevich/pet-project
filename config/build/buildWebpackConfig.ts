@@ -8,10 +8,10 @@ import {buildDevServer} from "./buildDevServer";
 export function buildWebpackConfig(options: IBuildOptions): Configuration {
     const { mode, paths, isDev } = options;
     return {
-        // mode: "development",
         mode,
         entry: paths.entry,
         module: {
+            // лоадеры используются для обработки всех файлов выходящих за рамки js (css, svg, png, etc.)
             rules: buildLoaders(options),
         },
         resolve: buildResolvers(options)   ,
