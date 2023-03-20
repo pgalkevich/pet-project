@@ -10,6 +10,7 @@ export function buildPlugins({paths}: IBuildOptions): WebpackPluginInstance[] {
              title: 'PG Project',
              template: paths.html
          }),
+         // необходим для отображения прогресса сборки и статистики по ней
          new ProgressPlugin(),
          new MiniCssExtractPlugin({
              filename: 'css/[name].[contenthash:8].css',

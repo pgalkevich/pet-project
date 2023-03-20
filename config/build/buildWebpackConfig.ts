@@ -18,6 +18,7 @@ export function buildWebpackConfig(options: IBuildOptions): Configuration {
         output: {
             filename: '[name].[contenthash].js',
             path: paths.build,
+            // очистка папки build при каждой сборке
             clean: true
         },
         plugins: buildPlugins(options),
