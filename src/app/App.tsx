@@ -12,8 +12,8 @@ const App = (): ReactElement => {
     return (
         <div className={classnames('app', {}, [theme])}>
             <Navbar />
-            <button onClick={toggleTheme}>Change Theme</button>
             <AppRouter />
+            <button onClick={toggleTheme}>Сменить тему</button>
         </div>
     );
 };

@@ -7,8 +7,8 @@ export const  AppRouter = () => {
         <Suspense fallback={<div>Loading...</div>} >
             <Routes>
                 {Object.values(routeConfig)
-                    .map(({element, path}) => (
-                        <Route path={path} element={element} />
+                    .map(({element, path}, index) => (
+                        <Route path={path} element={element} key={index} />
                     ))}
             </Routes>
         </Suspense>

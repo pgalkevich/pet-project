@@ -1,6 +1,9 @@
 .app {
-    --bg-color: #e8e8ea;
+    --bg-color: var(--color-gray-light);
+    --bg-color-inverted: var(--color-gray-dark);
 
-    --primary-color: #041c65;
-    --secondary-color: #0449e0;
+    --primary-color: var(--color-primary-dark);
+    --primary-color-inverted: var(--color-primary-light);
+    --secondary-color: var(--color-secondary-dark);
+    --secondary-color-inverted: var(--color-secondary-light);
 }
