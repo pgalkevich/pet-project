@@ -1,0 +1,21 @@
+.ThemeSwitcher {
+  //display: flex;
+  //align-items: center;
+  width: 40px;
+}
+
+.icon {
+  width: 100%;
+  height: auto;
+  transition: 0.1s;
+}
+
+.icon.light {
+  filter: invert(1);
+  transform: scale(-1);
+    //fill: var(--color-secondary-dark);
+}
+.icon.dark {
+  //transform: rotate(180deg);
+    //fill: var(--color-secondary-light);
+}

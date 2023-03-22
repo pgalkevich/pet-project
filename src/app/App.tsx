@@ -7,13 +7,13 @@ import {Navbar} from "widgets/Navbar";
 
 
 const App = (): ReactElement => {
-    const {theme, toggleTheme} = useTheme();
+    const { theme } = useTheme();
 
     return (
         <div className={classnames('app', {}, [theme])}>
             <Navbar />
             <AppRouter />
-            <button onClick={toggleTheme}>Сменить тему</button>
+
         </div>
     );
 };
