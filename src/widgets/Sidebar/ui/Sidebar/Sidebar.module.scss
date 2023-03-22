@@ -1,0 +1,42 @@
+.Sidebar {
+  height: calc(100vh - var(--navbar-height));
+  width: var(--sidebar-width);
+  background: var(--bg-color-inverted);
+  position: relative;
+  transition: width 0.2s;
+}
+
+.collapsed {
+  width: var(--sidebar-width-collapsed);
+}
+
+.switchers {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.collapseBtn {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: var(--bg-color);
+  color: var(--bg-color-inverted);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+
+  & > span {
+    position: relative;
+    top: -1px;
+    left: -1px;
+  }
+}
+.collapseBtn.collapsed {
+  transform: rotateY(180deg);
+}

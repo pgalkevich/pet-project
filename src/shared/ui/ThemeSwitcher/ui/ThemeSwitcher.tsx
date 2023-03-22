@@ -3,8 +3,7 @@ import classes from './ThemeSwitcher.module.scss';
 import {useTheme} from "app/providers/theme-provider";
 // import SwitcherIcon from 'shared/assets/icons/theme-switcher-dark.svg';
 import themeIconSrc from 'shared/assets/icons/theme-icon.png';
-import {Button} from "shared/ui/Button";
-import {EButtonTheme} from "shared/ui/Button/ui/Button";
+import {Button, EButtonTheme} from "shared/ui/Button";
 
 interface IThemeSwitcherProps {
     className?: string;
