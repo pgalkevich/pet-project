@@ -6,16 +6,43 @@
 
 .icon {
   width: 100%;
-  height: auto;
-  transition: 0.1s;
+  height: 20px;
+  border-radius: 10px;
+  background: var(--bg-color);
+  position: relative;
+
+  &:before {
+    content: '';
+    width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    background: var(--bg-color-inverted);
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    transition: 0.25s;
+  }
 }
 
-.icon.light {
-  filter: invert(1);
-  transform: scale(-1);
-    //fill: var(--color-secondary-dark);
-}
 .icon.dark {
-  //transform: rotate(180deg);
-    //fill: var(--color-secondary-light);
+  &:before {
+    left: 23px;
+  }
 }
+
+//стили для пнг иконки
+//.icon {
+//  width: 100%;
+//  height: auto;
+//  transition: 0.1s;
+//}
+//
+//.icon.light {
+//  filter: invert(1);
+//  transform: scale(-1);
+//    //fill: var(--color-secondary-dark);
+//}
+//.icon.dark {
+//  //transform: rotate(180deg);
+//    //fill: var(--color-secondary-light);
+//}

@@ -20,9 +20,10 @@ export const ThemeSwitcher = ({className}: IThemeSwitcherProps) => {
             onClick={toggleTheme}
         >
             {/*<SwitcherIcon className={classnames(classes.icon, {}, [classes[theme]])} />*/}
-            <img src={themeIconSrc} alt=""
-                 className={classnames(classes.icon, {}, [classes[theme]])}
-            />
+            <div className={classnames(classes.icon, {}, [classes[theme]])} />
+            {/*<img src={themeIconSrc} alt=""*/}
+            {/*     className={classnames(classes.icon, {}, [classes[theme]])}*/}
+            {/*/>*/}
         </Button>
     );
 };
