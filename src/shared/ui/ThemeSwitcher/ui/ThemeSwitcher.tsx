@@ -5,17 +5,14 @@ import {useTheme} from "app/providers/theme-provider";
 import themeIconSrc from 'shared/assets/icons/theme-icon.png';
 import {Button, EButtonTheme} from "shared/ui/Button";
 
-interface IThemeSwitcherProps {
-    className?: string;
-}
 
-export const ThemeSwitcher = ({className}: IThemeSwitcherProps) => {
+export const ThemeSwitcher = () => {
     const { theme, toggleTheme } = useTheme();
 
     return (
         <Button
             theme={EButtonTheme.CLEAR}
-            className={classnames(classes.ThemeSwitcher, {}, [theme])}
+            className={classnames(classes.ThemeSwitcher, {}, [classes[theme]])}
             onClick={toggleTheme}
         >
             {/*<SwitcherIcon className={classnames(classes.icon, {}, [classes[theme]])} />*/}

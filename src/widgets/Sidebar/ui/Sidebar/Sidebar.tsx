@@ -3,6 +3,7 @@ import classes from './Sidebar.module.scss';
 import React, {useState} from "react";
 import {Button, EButtonTheme} from "shared/ui/Button";
 import {ThemeSwitcher} from "shared/ui/ThemeSwitcher";
+import {LangSwitcher} from "shared/ui/LangSwitcher";
 
 interface ISidebarProps {
     className?: string;
@@ -21,7 +22,7 @@ export const Sidebar = ({className}: ISidebarProps) => {
         >
             <div className={classes.switchers}>
                 <ThemeSwitcher />
-                {/*<LangSwitcher />*/}
+                <LangSwitcher />
                 <Button
                     theme={EButtonTheme.CLEAR}
                     onClick={onToggle}
