@@ -6,6 +6,8 @@ export function buildDevServer(options: IBuildOptions): DevServerConfiguration {
         open: true,
         port: options.port,
         // эта опция позволяет открывать страницы по прямым ссылкам на них
-        historyApiFallback: true
+        historyApiFallback: true,
+        // для быстрого отображения изменений без перезагрузки страницы
+        hot: true
     }
 }
