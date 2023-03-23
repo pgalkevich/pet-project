@@ -48,10 +48,23 @@ export function buildLoaders({isDev}: IBuildOptions): RuleSetRule[] {
         ],
     }
 
+    const babelLoader = {
+        test: /\.(js|jsx|tsx)$/,
+        exclude: /node_modules/,
+        use: {
+            loader: "babel-loader",
+            options: {
+                presets: ['@babel/preset-env']
+            }
+        }
+    }
+
+    // порядок лоадеров очень важен. могут быть ошибки
     return [
         fileLoader,
         svgLoader,
+        // babelLoader,
         typescriptLoader,
-        cssloader
+        cssloader,
     ];
 }
