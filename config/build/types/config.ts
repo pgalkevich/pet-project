@@ -7,14 +7,14 @@ export interface IBuildPaths {
     src: string;
 }
 
- export interface IBuildOptions {
+export interface IBuildOptions {
     mode: TMode;
     paths: IBuildPaths;
     isDev: boolean;
     port: number;
- }
+}
 
- export interface IBuildEnv {
+export interface IBuildEnv {
     mode: TMode;
     port: number;
- }
+}

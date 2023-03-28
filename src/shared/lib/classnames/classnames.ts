@@ -5,7 +5,7 @@ export const classnames = (cls: string, mods: TMods = {}, additional: string[] =
         cls,
         ...additional.filter(Boolean),
         ...Object.entries(mods)
-            .filter(([cls, condition]) => Boolean(condition))
-            .map(([cls, condition]) => cls)
+            .filter(([_, condition]) => Boolean(condition))
+            .map(([className]) => className),
     ].join(' ');
-}
+};
