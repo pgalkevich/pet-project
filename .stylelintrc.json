@@ -7,6 +7,7 @@
     "scss/double-slash-comment-whitespace-inside": null,
     "declaration-property-value-no-unknown": true,
     "custom-property-empty-line-before": null,
-    "color-hex-length": "long"
+    "color-hex-length": "long",
+    "scss/double-slash-comment-empty-line-before": null
   }
 }
