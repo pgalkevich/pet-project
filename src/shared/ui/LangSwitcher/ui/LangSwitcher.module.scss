@@ -1,15 +1,15 @@
 .LangSwitcher {
-  width: 50px;
-  max-height: 20px;
-  height: 20px;
-  color: var(--bg-color);
-  display: flex;
-  align-items: center;
-  gap: 5px;
+    width: 50px;
+    max-height: 20px;
+    height: 20px;
+    color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .LangSwitcher.light * {
-  stroke: var(--bg-color);
-  color: var(--bg-color);
+    stroke: var(--bg-color);
+    color: var(--bg-color);
 }
 
