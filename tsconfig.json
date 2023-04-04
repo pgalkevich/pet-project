@@ -28,6 +28,8 @@
     // console.log(Moment); - c флагом результат [object Object]
     "esModuleInterop": true,
 
+    "sourceMap": true,
+
     // Если какая-либо библиотека не имеет default import,
     // лоадеры вроде ts-loader или babel-loader автоматически создают их
     // import * as React from 'react'; - вместо такого импорта
