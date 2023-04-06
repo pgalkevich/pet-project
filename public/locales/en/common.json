@@ -1,4 +1,8 @@
 {
   "lang-toggle": "Рус",
-  "not-found-page": "Page not found"
+  "not-found-page": "Page not found",
+  "error-screen": {
+    "message": "Something went wrong! Try it later.",
+    "reload": "Reload page"
+  }
 }

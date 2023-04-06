@@ -3,8 +3,8 @@ import './styles/index.scss';
 import { useTheme } from 'app/providers/theme-provider';
 import { classnames } from 'shared/lib/classnames/classnames';
 import { AppRouter } from 'app/providers/router';
-import { Navbar } from 'widgets/Navbar';
-import { Sidebar } from 'widgets/Sidebar';
+import { Navbar } from 'widgets/navbar';
+import { Sidebar } from 'widgets/sidebar';
 
 const App = (): ReactElement => {
     const { theme } = useTheme();
