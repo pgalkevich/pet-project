@@ -20,6 +20,10 @@ export default {
         'node_modules',
     ],
 
+    modulePaths: [
+        '<rootDir>src',
+    ],
+
     // An array of file extensions your modules use
     moduleFileExtensions: [
         'js',
@@ -38,6 +42,13 @@ export default {
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
     ],
 
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+
+    moduleNameMapper: {
+        '\\.s?css$': 'identity-obj-proxy',
+        // '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+        //     '<rootDir>/__mocks__/fileMock.js',
+    },
     // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
     // testPathIgnorePatterns: [
     //   "/node_modules/"
