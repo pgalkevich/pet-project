@@ -3,6 +3,8 @@
  * https://jestjs.io/docs/configuration
  */
 
+import path from 'path';
+
 export default {
     // The test environment that will be used for testing
     testEnvironment: 'jsdom',
@@ -46,6 +48,8 @@ export default {
 
     moduleNameMapper: {
         '\\.s?css$': 'identity-obj-proxy',
+        // mock который будет использоваться для всех импортов svg
+        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
         // '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
         //     '<rootDir>/__mocks__/fileMock.js',
     },
