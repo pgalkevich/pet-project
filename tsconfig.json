@@ -41,7 +41,11 @@
       "module": "CommonJS"
     }
   },
-//  "include": [
-//    "./config/jest/setupTests.ts",
-//  ]
+  "include": [
+    "./config/jest/*.ts",
+    "./config/jest/jestEmptyComponent.tsx",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./*.ts",
+  ]
 }
